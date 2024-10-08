@@ -6,10 +6,8 @@ import {
     ScrollRestoration,
     isRouteErrorResponse,
     useRouteError,
-    useNavigate,
 } from '@remix-run/react';
-import { useEffect, useRef } from 'react';
-import { ROUTES } from '~/router/config';
+import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -39,21 +37,27 @@ export default function App() {
 }
 
 export function ErrorBoundary() {
-    const locationRef = useRef<string | undefined>(
-        typeof window !== 'undefined' ? window.location.href : undefined
-    );
+    const error = useRouteError();
+    const { title, message } = getErrorDetails(error);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (window.location.href !== locationRef.current) {
-                locationRef.current = window.location.href;
-                clearInterval(interval);
-                // force full page reload after navigating from error boundary
-                // to fix remix issue with style tags disappearing
-                window.location.reload();
-            }
-        }, 100);
-    }, []);
+    return <ErrorComponent title={title} message={message} />;
+}
 
-    return <div>Error View</div>;
+function getErrorDetails(error: unknown) {
+    let title: string;
+    let message: string | undefined;
+
+    if (isRouteErrorResponse(error)) {
+        if (error.status === 404) {
+            title = 'Page Not Found';
+            message = "Looks like the page you're trying to visit doesn't exist";
+        } else {
+            title = `${error.status} - ${error.statusText}`;
+            message = error.data?.message ?? '';
+        }
+    } else {
+        title = 'Unknown error ocurred';
+    }
+
+    return { title, message };
 }
