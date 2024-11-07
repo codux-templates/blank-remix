@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <div>
+        <div id="root">
             <Outlet />
         </div>
     );
