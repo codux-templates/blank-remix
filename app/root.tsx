@@ -1,3 +1,8 @@
+import '~/styles/reset.scss';
+import '~/styles/colors.scss';
+import '~/styles/typography.scss';
+import '~/styles/global.scss';
+
 import {
     Links,
     Meta,
@@ -8,7 +13,6 @@ import {
     useRouteError,
 } from '@remix-run/react';
 import { ErrorComponent } from '~/components/error-component/error-component';
-import '~/styles/index.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (

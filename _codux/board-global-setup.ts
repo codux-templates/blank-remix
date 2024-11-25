@@ -1,2 +1,4 @@
-import '../src/styles/index.scss';
-import '../src/styles/theme.module.scss';
+import '~/styles/reset.scss';
+import '~/styles/colors.scss';
+import '~/styles/typography.scss';
+import '~/styles/global.scss';
