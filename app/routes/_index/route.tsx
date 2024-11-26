@@ -1,7 +1,5 @@
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
 import { getUrlOriginWithPath } from '~/utils';
-import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
-import ViteSvg from '../../../src/assets/svg/vite.svg';
 import styles from './_index.module.scss';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
@@ -11,15 +9,11 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
-            <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
+            <h2 className={styles.title}>Welcome To App Homepage 🎉</h2>
             <span className={styles.paragraph}>
-                Double click to edit App component <br /> and drag here elements from Add Elements Panel
+                Double click to edit App component <br /> and drag here elements from Add Elements
+                Panel
             </span>
-            <p className={styles.paragraph}>
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.
-            </p>
         </div>
     );
 }

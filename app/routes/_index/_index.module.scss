@@ -4,16 +4,17 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 2px dashed #888888;
+    border: 2px dashed var(--secondary);
     border-radius: 30px;
     width: 100vw;
     min-height: 100vh;
     justify-content: center;
-    background-color: var(--snow-white);
+    background-color: var(--primary);
 }
 
 .title {
     font: var(--large-font);
+    color: var(--black);
 }
 
 .paragraph {
@@ -23,8 +24,9 @@
     gap: 3px;
     justify-content: center;
     font: var(--paragraph-font);
+    color: var(--black);
 }
 
-.detail{
- font: var(--small-font);
+.detail {
+    font: var(--small-font);
 }
