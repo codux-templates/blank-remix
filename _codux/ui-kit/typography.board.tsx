@@ -1,3 +1,4 @@
+import '../../src/styles/utils.scss';
 import { createBoard, Variant } from '@wixc3/react-board';
 import { Kit } from '../ui-kit-utils/kit';
 
@@ -8,10 +9,12 @@ export default createBoard({
             <Kit.Section title="Heading">
                 <Kit.Item>
                     <Variant name="Heading1">
-                        <h1>Heading 1</h1>
+                        <Variant name="Large-Font">
+                            <h1 className="largeFont">Large-font</h1>
+                        </Variant>
                     </Variant>
                     <Kit.Description>
-                        <b>--heading1:</b> Marcellus / 80px / 1
+                        <b>--large-font:</b>DM Sans / 6em / 1.2
                     </Kit.Description>
                 </Kit.Item>
                 <Kit.Item>
@@ -59,9 +62,7 @@ export default createBoard({
             <Kit.Section title="Paragraph">
                 <Kit.Item>
                     <Variant name="Paragraph1">
-                        <div>
-                            We ignite opportunity by setting the world in motion. 0123456789
-                        </div>
+                        <div>We ignite opportunity by setting the world in motion. 0123456789</div>
                     </Variant>
                     <Kit.Description>
                         <b>--paragraph1:</b> Figtree (400) / 16px / 1.5
@@ -69,9 +70,7 @@ export default createBoard({
                 </Kit.Item>
                 <Kit.Item>
                     <Variant name="Paragraph2">
-                        <div>
-                            We ignite opportunity by setting the world in motion. 0123456789
-                        </div>
+                        <div>We ignite opportunity by setting the world in motion. 0123456789</div>
                     </Variant>
                     <Kit.Description>
                         <b>--paragraph2:</b> Figtree (400) / 15px / 1.6
@@ -79,9 +78,7 @@ export default createBoard({
                 </Kit.Item>
                 <Kit.Item>
                     <Variant name="Paragraph3">
-                        <div>
-                            We ignite opportunity by setting the world in motion. 0123456789
-                        </div>
+                        <div>We ignite opportunity by setting the world in motion. 0123456789</div>
                     </Variant>
                     <Kit.Description>
                         <b>--paragraph3:</b> Figtree (400) / 14px / 1.6
