@@ -12,7 +12,7 @@ export default createBoard({
                         <h1 className="largeFont">Large Font</h1>
                     </Variant>
                     <Kit.Description>
-                        <b>--large-font:</b> DM Sans / 6em / 1.2
+                        <b>--large-font:</b> DM Sans / 8vw / 1.2
                     </Kit.Description>
                 </Kit.Item>
                 <Kit.Item>
@@ -20,7 +20,7 @@ export default createBoard({
                         <h2 className="small-font">Small Font</h2>
                     </Variant>
                     <Kit.Description>
-                        <b>--small-font:</b> DM Sans / 3rem / 1.4
+                        <b>--small-font:</b> DM Sans / 5vw / 1.4
                     </Kit.Description>
                 </Kit.Item>
             </Kit.Section>
@@ -33,7 +33,7 @@ export default createBoard({
                         </div>
                     </Variant>
                     <Kit.Description>
-                        <b>--paragraph-font:</b> DM Sans / 2rem / 1.3
+                        <b>--paragraph-font:</b> DM Sans / 3vw / 1.3
                     </Kit.Description>
                 </Kit.Item>
             </Kit.Section>
