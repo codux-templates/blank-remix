@@ -11,8 +11,8 @@ export default function HomePage() {
         <div className={styles.root}>
             <h2 className={styles.title}>Welcome To App Homepage 🎉</h2>
             <span className={styles.paragraph}>
-                Double click to edit App component <br /> and drag here elements from the Add
-                Elements Panel
+                Drag here elements from the Add Elements Panel
+                <br /> and style them using the Styles panel
             </span>
         </div>
     );
