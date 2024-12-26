@@ -48,5 +48,8 @@
       "node:assert": false
     }
   },
-  "svgLoader": "both"
+  "svgLoader": "both",
+  "addPanel": {
+    "assets": ["@codux-pond/component-templates"]
+  }
 }

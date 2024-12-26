@@ -21,6 +21,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@codux-pond/component-templates": "^1.0.2",
     "@remix-run/dev": "^2.15.1",
     "@remix-run/testing": "^2.15.1",
     "@types/react": "^18.3.13",
